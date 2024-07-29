@@ -40,3 +40,7 @@ Open [http://localhost:6868](http://localhost:3000).
 Remember that everytime you update the code a docker container restart is needed. If you know how to use nodemon you could get advantage of this tool to avoid the container restart.
 
 
+# Support the project
+
+If you find this project useful and would like to support further development, consider making a donation. Your support helps keep the project alive and growing! Click on the link below:
+Buy me a beer: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=SX6JC6E6GE7JL)
