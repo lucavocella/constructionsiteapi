@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ConstructionSiteAPI Proof of Concept
 
-## Available Scripts
+ConstructionSiteAPI is a proof of concept that allows manufacturers to digitally represent construction sites. This API offers a streamlined way to create different construction site scenarios through a clean and visual UI, developed using Three.js, and a parametric model that adapts based on dimensions taken at the worksite.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- **Digital Representation**: Easily create a digital version of your construction site.
+- **Parametric Modeling**: Dynamic models that change according to worksite measurements.
+- **Three.js UI**: Intuitive and visual interface built with Three.js for a seamless user experience.
+- **JSON REST API**: Generates a standardized JSON output that can be read by any CAD/BIM platform.
+- **Automation**: Facilitates the storage of worksite information in a standardized way, helping developers automate the workflow for creating 2D or 3D drawings from the JSON representation of the context where the product will be placed.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. **Initialize the Template Class**:
+    - The template class is located in the `components` folder. It allows you to build various construction site scenarios.
 
-### `npm test`
+2. **Example - Niche Class**:
+    - An example of the `niche` class is provided to help developers understand the workflow.
+    - In the `niche` component, you need to define the parameters and the geometry, which currently consists of multiple boxes.
+    - The `components` folder also includes other 3D objects and useful components like `kricanvas`, an improved version of canvas that can be reused in all templates.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Parameter Input**:
+    - The `parameterInput` component generates a form that controls the parameters specified in the `niche` class.
 
-### `npm run build`
+4. **Rendering**:
+    - Use the `render` and `renderjson` functions in the template class to render the object with Three.js or to generate a JSON representation.
+    - To activate the JSON representation, append `?json=1` to the query string of the URL.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To get started with ConstructionSiteAPI, clone this repository and follow the setup instructions in the README file in the frontend and backend folder.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+git clone https://github.com/yourusername/ConstructionSiteAPI.git
+cd ConstructionSiteAPI
+cd frontend 
+docker-compose up -d
